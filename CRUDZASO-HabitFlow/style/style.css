@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    overflow: hidden;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+.box{
+    display: flex;
+    display: grid;
+    gap: 5px;
+    background-color: aqua;
+    padding: 100px;
+    margin-top: 300px;
+        
+}
+
+.box input{
+    height: 30px;
+    border-radius: 10px;
+}
+
+.box button{
+    height: 30px;
+    border-radius: 10px;
+}
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - HabitFlow</title>
+    <link rel="stylesheet" href="../style/stylesh.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1> HabitFlow</h1>
+            <p id="userName">Hola, Usuario</p>
+        </div>
+        <div class="header-right">
+            <button id="darkModeBtn" class="dark-btn">hy</button>
+            <button id="logoutBtn" class="logout-btn">Cerrar Sesión</button>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalCount">0</div>
+                <div class="stat-label">Total</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="pendingCount">0</div>
+                <div class="stat-label">Pendientes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="progressCount">0</div>
+                <div class="stat-label">En Proceso</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="doneCount">0</div>
+                <div class="stat-label">Completados</div>
+            </div>
+        </div>
+
+      
+        <div class="form-container">
+            <h2>Crear Nuevo Hábito</h2>
+            <form id="habitForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Título</label>
+                        <input type="text" id="habitTitle" placeholder="Ej: Hacer ejercicio" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Frecuencia</label>
+                        <select id="habitFrequency">
+                            <option value="diaria">Diaria</option>
+                            <option value="semanal">Semanal</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Prioridad</label>
+                        <select id="habitPriority">
+                            <option value="baja">Baja</option>
+                            <option value="media">Media</option>
+                            <option value="alta">Alta</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-add">Agregar</button>
+                </div>
+            </form>
+        </div>
+
+        
+        <div class="controls">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="pendiente">Pendientes</button>
+                <button class="filter-btn" data-filter="en-proceso">En Proceso</button>
+                <button class="filter-btn" data-filter="completado">Completados</button>
+            </div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar hábito...">
+            </div>
+        </div>
+        <div class="board">
+            <div class="column">
+                <div class="column-header pending-header">
+                    <h3> Pendiente</h3>
+                </div>
+                <div class="column-content" id="pendingColumn"></div>
+            </div>
+
+            <div class="column">
+                <div class="column-header progress-header">
+                    <h3> En Proceso</h3>
+                </div>
+                <div class="column-content" id="progressColumn"></div>
+            </div>
+
+            <div class="column">
+                <div class="column-header done-header">
+                    <h3> Completado</h3>
+                </div>
+                <div class="column-content" id="doneColumn"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../scr/"></script>
+</body>
+</html>
