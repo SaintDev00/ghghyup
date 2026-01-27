@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -39,7 +38,7 @@ body.dark header {
 }
 
 body.dark .header-left p {
-    color: #aaa;
+    color: #2670b6;
 }
 
 .header-right {
@@ -101,7 +100,7 @@ body.dark .stat-card {
 .stat-number {
     font-size: 36px;
     font-weight: bold;
-    color: #667eea;
+    color: #000000;
 }
 
 .stat-label {
